@@ -1,7 +1,8 @@
 cd src/ex/
 for MY_FILE in *.java
 do
-	tail -n +2 "$MY_FILE" > "$MY_FILE.tmp" && mv "$MY_FILE.tmp" "$MY_FILE"
+	echo "-n +2 $MY_FILE > $MY_FILE.tmp && mv $MY_FILE.tmp $MY_FILE"
+	tail -n +2 $MY_FILE > $MY_FILE.tmp && mv $MY_FILE.tmp $MY_FILE
 done
 
 for MY_FILE in *.java
