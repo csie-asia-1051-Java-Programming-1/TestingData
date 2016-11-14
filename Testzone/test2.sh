@@ -1,10 +1,13 @@
+!#/bin/bash
 cd src/ex/
 for MY_FILE in *.java do
+	echo "$MY_FILE"
 	echo "tail -n +2 $MY_FILE > $MY_FILE.tmp && mv $MY_FILE.tmp $MY_FILE"
+	tail -n +2 $MY_FILE > $MY_FILE.tmp && mv $MY_FILE.tmp $MY_FILE
 done
 
 for MY_FILE in *.java do
-	javac $MY_FILE
+	javac "$MY_FILE"
 done
 
 for ((i = 0; i < 1; i++)) do
