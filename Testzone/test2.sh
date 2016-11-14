@@ -12,5 +12,5 @@ done
 
 for ((i = 1; i <= 1; i++))
 do
-	java ex0$i_1050210XX < ../../bot/data$i.txt
+	java ex0$i\_1050210XX < ../../bot/data$i.txt
 done
